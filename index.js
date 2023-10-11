@@ -12,7 +12,8 @@ const connection = mysql.createConnection({
   host:process.env.MYSQLHOST,
   user: process.env.MYSQLUSER,  // Replace with your actual username
   password: process.env.MYSQLPASSWORD,  // Replace with your actual password
-  database: process.env.MYSQLDATABASE,  // Replace with your actual database name
+  //database: process.env.MYSQLDATABASE,  // Replace with your actual database name
+connectTimeout:60000
 });
 
 connection.connect((err) => {
